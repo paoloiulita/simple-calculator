@@ -1,0 +1,76 @@
+.container {
+    margin-top: 20px;
+}
+
+.calculator-wrapper {
+    width:475px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 0;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#030433+0,2db4a5+100 */
+    background: #030433; /* Old browsers */
+    background: -moz-linear-gradient(top,  #030433 0%, #2db4a5 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #030433 0%,#2db4a5 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #030433 0%,#2db4a5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030433', endColorstr='#2db4a5',GradientType=0 ); /* IE6-9 */
+}
+
+.buttons-wrapper .col-3,
+.buttons-wrapper .col-6 {
+    width: 100%;
+    text-align: center;
+    margin-bottom:1px;
+}
+
+.display-wrapper {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.display {
+    font-size: 80px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 40px;
+}
+
+.buttons-wrapper {
+    height: 80%;
+}
+
+.buttons-wrapper .row {
+    height: 100%;
+}
+
+.buttons-wrapper .col-3 .calculator-button,
+.buttons-wrapper .col-6 .calculator-button {
+    color: white;
+    font-weight: lighter;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-size: 50px;
+    margin-right: 1px;
+    background-color: rgba(255,255,255,0.1);
+    transition: 0.5s ease;
+}
+
+.buttons-wrapper .col-3 .calculator-button.operator {
+    background-color: rgba(255,255,255,0.3);
+}
+
+.buttons-wrapper .calculator-button:hover {
+    background-color: rgba(255,255,255,0.6) !important;
+}
+
+.buttons-wrapper .calculator-button:active {
+    box-shadow: inset 1px 1px 13px #777;
+    transform: translateY(2px);
+}
