@@ -6,6 +6,7 @@
 	<title>Calculator</title>
 	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="./js/index.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -18,61 +19,61 @@
 			<div class="buttons-wrapper">
 				<div class="row no-gutters">
 					<div class="col-3 d-flex">
-						<div class="calculator-button">C</div>
+						<div class="calculator-button" data-type="special" data-value="c">C</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">+/-</div>
+						<div class="calculator-button" data-type="special" data-value="sign">+/-</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">%</div>
+						<div class="calculator-button"  data-type="special" data-value="percent">%</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button operator">=</div>
+						<div class="calculator-button operator" data-type="operator" data-value="equal">=</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">7</div>
+						<div class="calculator-button" data-type="digit" data-value="7">7</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">8</div>
+						<div class="calculator-button" data-type="digit" data-value="8">8</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">9</div>
+						<div class="calculator-button" data-type="digit" data-value="9">9</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button operator">X</div>
+						<div class="calculator-button operator" data-type="operator" data-value="x">X</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">4</div>
+						<div class="calculator-button" data-type="digit" data-value="4">4</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">5</div>
+						<div class="calculator-button" data-type="digit" data-value="5">5</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">6</div>
+						<div class="calculator-button" data-type="digit" data-value="6">6</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button operator">&#247;</div>
+						<div class="calculator-button operator" data-type="operator" data-value="slash">&#247;</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">1</div>
+						<div class="calculator-button" data-type="digit" data-value="1">1</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">2</div>
+						<div class="calculator-button" data-type="digit" data-value="2">2</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">3</div>
+						<div class="calculator-button" data-type="digit" data-value="3">3</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button operator">+</div>
+						<div class="calculator-button operator" data-type="operator" data-value="plus">+</div>
 					</div>
 					<div class="col-6 d-flex">
-						<div class="calculator-button">0</div>
+						<div class="calculator-button" data-type="digit" data-value="0">0</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button">.</div>
+						<div class="calculator-button" data-type="special" data-value="dot">.</div>
 					</div>
 					<div class="col-3 d-flex">
-						<div class="calculator-button operator">-</div>
+						<div class="calculator-button operator" data-type="operator" data-value="minus">-</div>
 					</div>
 				</div>
 			</div>
