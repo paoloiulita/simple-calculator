@@ -1,0 +1,8 @@
+{
+  "name": "simple-calculator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/paoloiulita/simple-calculator.git",
+  "author": "Paolo Iulita <paolo.iulita@gmail.com>",
+  "license": "MIT"
+}
