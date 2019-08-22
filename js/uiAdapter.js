@@ -32,6 +32,7 @@ const UI = {
 				clear: specials.find(elem => elem.getAttribute('data-value') == 'c'),
 				changeSign: specials.find(elem => elem.getAttribute('data-value') == 'sign'),
 				percentage: specials.find(elem => elem.getAttribute('data-value') == 'percent'),
+				display: specials.find(elem => elem.getAttribute('data-value') == 'display'),
 			}
 		}
 	}
