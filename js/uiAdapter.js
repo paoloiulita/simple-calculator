@@ -23,11 +23,11 @@ const UI = {
 			operators: {
 				add: operators.find(elem => elem.getAttribute('data-value') == 'plus'),
 				subtract: operators.find(elem => elem.getAttribute('data-value') == 'minus'),
-				calculate: operators.find(elem => elem.getAttribute('data-value') == 'equal'),
 				multiply: operators.find(elem => elem.getAttribute('data-value') == 'x'),
 				divide: operators.find(elem => elem.getAttribute('data-value') == 'slash'),
 			},
 			specials: {
+				calculate: operators.find(elem => elem.getAttribute('data-value') == 'equal'),
 				decimal: specials.find(elem => elem.getAttribute('data-value') == 'dot'),
 				clear: specials.find(elem => elem.getAttribute('data-value') == 'c'),
 				changeSign: specials.find(elem => elem.getAttribute('data-value') == 'sign'),
