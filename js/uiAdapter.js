@@ -27,7 +27,7 @@ const UI = {
 				divide: operators.find(elem => elem.getAttribute('data-value') == 'slash'),
 			},
 			specials: {
-				calculate: operators.find(elem => elem.getAttribute('data-value') == 'equal'),
+				calculate: specials.find(elem => elem.getAttribute('data-value') == 'equal'),
 				decimal: specials.find(elem => elem.getAttribute('data-value') == 'dot'),
 				clear: specials.find(elem => elem.getAttribute('data-value') == 'c'),
 				changeSign: specials.find(elem => elem.getAttribute('data-value') == 'sign'),
