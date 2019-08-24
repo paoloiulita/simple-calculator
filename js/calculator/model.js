@@ -4,34 +4,53 @@ const multiply = (a, b) => a * b;
 const divide = (a, b) => a / b;
 
 let state;
-const initialState = {
-	firstOperand: [],
-	secondOperand: [],
-	operator: null,
-	currentOperand: null
+let cb;
+const operatorMap = { add, subtract, multiply, divide };
+const getRealOperand = operand => parseFloat(operand.join(''));
+
+const addDigit = d => {
+	state.currentOperand.push(d);
+	cb && cb(getRealOperand(state.currentOperand));
+}
+const calculateResult = _ => {
+	const f = getRealOperand(state.firstOperand);
+	const s = getRealOperand(state.secondOperand);
+	const fn = operatorMap[state.operator];
+	state.result = fn(f, s);
+	cb && cb(state.result);
+}
+const addDecimal = _ => addDigit('.');
+const clear = _ => {
+	state = {
+		firstOperand: [],
+		secondOperand: [],
+		operator: null,
+		currentOperand: null,
+		result: 0
+	};
+	state.currentOperand = state.firstOperand;
+	cb && cb(state.result);
 };
-
-state = initialState;
-state.currentOperand = state.firstOperand;
-
-const addDigit = d => state.currentOperand.push(d);
-const calculateResult = _ => console.log('calculateResult');
-const addDecimal = _ => console.log('calculateResult');
-const clear = _ => console.log('clear');
 const changeSign = _ => console.log('changeSign');
 const calcPercentage = _ => console.log('calcPercentage');
-const setOperator = op => state.operator = op;
-let result = 0;
+const setOperator = op => {
+	state.operator = op;
+	state.currentOperand = state.secondOperand;
+}
+const setCallback = callback => cb = callback;
+
+clear();
 
 const model = {
-	result,
 	addDigit,
 	calculateResult,
 	addDecimal,
 	clear,
 	changeSign,
 	calcPercentage,
-	setOperator
+	setOperator,
+	result: state.result,
+	setCallback
 };
 
 export default model;

@@ -14,11 +14,21 @@ const addOperatorListeners = ({ operators }) => {
 	}
 }
 
+const getChangeCallback = display => result => {
+	display.textContent = result;
+}
+
 const Calculator = {
 	create: ({ ui }) => {
-		const { digits, operators } = ui;
+		const { digits, operators, specials } = ui;
+		const changeCallback = getChangeCallback(specials.display);
 		addDigitListeners({ digits });
 		addOperatorListeners({ operators });
+		specials.calculate.onclick = e => model.calculateResult();
+		specials.clear.onclick = e => model.clear();
+		specials.percentage.onclick = e => model.clear();
+		specials.decimal.onclick = e => model.addDecimal();
+		model.setCallback(changeCallback);
 	}
 };
 
