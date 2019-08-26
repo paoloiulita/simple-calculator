@@ -31,7 +31,14 @@ const clear = _ => {
 	state.currentOperand = state.firstOperand;
 	cb && cb(state.result);
 };
-const changeSign = _ => console.log('changeSign');
+const changeSign = _ => {
+	if (state.currentOperand[0] === '-') {
+		state.currentOperand = state.currentOperand.slice(1);
+		cb && cb(getRealOperand(state.currentOperand));
+	} else {
+		state.currentOperand.unshift('-');
+	}
+};
 const calcPercentage = _ => console.log('calcPercentage');
 const setOperator = op => {
 	state.operator = op;

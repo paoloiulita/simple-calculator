@@ -28,6 +28,7 @@ const Calculator = {
 		specials.clear.onclick = e => model.clear();
 		specials.percentage.onclick = e => model.clear();
 		specials.decimal.onclick = e => model.addDecimal();
+		specials.changeSign.onclick = e => model.changeSign();
 		model.setCallback(changeCallback);
 	}
 };
