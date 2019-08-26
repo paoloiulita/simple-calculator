@@ -1,13 +1,13 @@
-import model from './model';
+import Model from './model';
 
-const addDigitListeners = ({ digits }) => {
+const addDigitListeners = ({ model, digits }) => {
 	for (const key of Object.keys(digits)) {
 		const elem = digits[key];
 		elem.onclick = e => model.addDigit(e.target.dataset.value);
 	}
 }
 
-const addOperatorListeners = ({ operators }) => {
+const addOperatorListeners = ({ model, operators }) => {
 	for (const key of Object.keys(operators)) {
 		const elem = operators[key];
 		elem.onclick = e => model.setOperator(key);
@@ -22,13 +22,13 @@ const Calculator = {
 	create: ({ ui }) => {
 		const { digits, operators, specials } = ui;
 		const changeCallback = getChangeCallback(specials.display);
-		addDigitListeners({ digits });
-		addOperatorListeners({ operators });
+		const model = Model.create({ callback: changeCallback })
+		addDigitListeners({ model, digits });
+		addOperatorListeners({ model, operators });
 		specials.calculate.onclick = e => model.calculateResult();
 		specials.clear.onclick = e => model.clear();
 		specials.decimal.onclick = e => model.addDecimal();
 		specials.changeSign.onclick = e => model.changeSign();
-		model.setCallback(changeCallback);
 	}
 };
 

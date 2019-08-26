@@ -45,17 +45,20 @@ const setOperator = op => {
 }
 const setCallback = callback => cb = callback;
 
-clear();
-
-const model = {
-	addDigit,
-	calculateResult,
-	addDecimal,
-	clear,
-	changeSign,
-	setOperator,
-	result: state.result,
-	setCallback
+const Model = {
+	create: ({ callback }) => {
+		setCallback(callback);
+		clear();
+		return {
+			addDigit,
+			calculateResult,
+			addDecimal,
+			clear,
+			changeSign,
+			setOperator,
+			result: state.result,
+		}
+	}
 };
 
-export default model;
+export default Model;
