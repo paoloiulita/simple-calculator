@@ -46,8 +46,8 @@
     height: 100%;
 }
 
-.buttons-wrapper .col-3 .calculator-button,
-.buttons-wrapper .col-6 .calculator-button {
+.calculator-button,
+.calculator-button {
     color: white;
     font-weight: lighter;
     display: flex;
@@ -62,15 +62,19 @@
     transition: 0.5s ease;
 }
 
-.buttons-wrapper .col-3 .calculator-button.operator {
+.calculator-button.operator {
+    background-color: rgba(220,220,220,0.3);
+}
+
+.calculator-button.operator.equal {
     background-color: rgba(255,255,255,0.3);
 }
 
-.buttons-wrapper .calculator-button:hover {
+.calculator-button:hover {
     background-color: rgba(255,255,255,0.6) !important;
 }
 
-.buttons-wrapper .calculator-button:active {
+.calculator-button:active {
     box-shadow: inset 1px 1px 13px #777;
     transform: translateY(2px);
 }
