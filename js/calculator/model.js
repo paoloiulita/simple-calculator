@@ -39,7 +39,6 @@ const changeSign = _ => {
 		state.currentOperand.unshift('-');
 	}
 };
-const calcPercentage = _ => console.log('calcPercentage');
 const setOperator = op => {
 	state.operator = op;
 	state.currentOperand = state.secondOperand;
@@ -54,7 +53,6 @@ const model = {
 	addDecimal,
 	clear,
 	changeSign,
-	calcPercentage,
 	setOperator,
 	result: state.result,
 	setCallback
